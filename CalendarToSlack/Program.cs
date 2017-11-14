@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using CalendarToSlack.Http;
 using System;
+using CalendarToSlack.Sql;
 using log4net;
 using log4net.Appender;
 using log4net.Config;
@@ -44,6 +45,10 @@ namespace CalendarToSlack
 
             var userdbfile = Path.Combine(datadir, "db-users.txt");
             var markdbfile = Path.Combine(datadir, "db-marks.txt");
+
+            var sqlDb = new SqlDatabase(datadir);
+            sqlDb.Start();
+            sqlDb.Bootstrap();
 
             var userdb = new UserDatabase(userdbfile, slack);
             var markdb = new MarkedEventDatabase(markdbfile);
