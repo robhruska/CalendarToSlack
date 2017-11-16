@@ -96,6 +96,7 @@
     <Compile Include="Slack.cs" />
     <Compile Include="SlackCommandConsumer.cs" />
     <Compile Include="Sql\SqlDatabase.cs" />
+    <Compile Include="Sql\SqlStatus.cs" />
     <Compile Include="Sql\SqlUser.cs" />
     <Compile Include="Updater.cs" />
     <Compile Include="UserDatabase.cs" />
