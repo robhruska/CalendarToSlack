@@ -187,7 +187,7 @@ namespace CalendarToSlack
                 // This assumes that the custom status of the user at startup is their desired default, 
                 // but if the app starts when the user has a meeting or OOO-related status set, that will be
                 // used as the default. TODO: add manual default status setting: https://github.com/robhruska/CalendarToSlack/issues/17
-                if (member.profile.status_emoji != ":spiral_calendar_pad:")
+                if (member.profile.status_emoji != ":spiral_calendar_pad:" && member.profile.status_emoji != ":speech_balloon:")
                 {
                     slackUserInfo.DefaultCustomStatus = new CustomStatus
                     {
